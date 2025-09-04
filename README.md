@@ -13,11 +13,15 @@
 
 
 Запуск:
+
 `
 minikube start
 `
+
 Открываем графану:
+
 `
 kubectl port-forward svc/prometheus-grafana 3000:80
 `
+
 Затем переходим на localhost:3000 и вводим логин admin и пароль prom-operator.
