@@ -11,6 +11,13 @@
 настройте Horizontal Pod Autoscaler (HPA), чтобы масштабировать поды при увеличении нагрузки (kubectl autoscale deployment my-app --cpu-percent=50 --min=2 --max=5).
  настройте Prometheus и Grafana через (helm install prometheus prometheus-community/kube-prometheus-stack). Настройте дашборды в Grafana для мониторинга нагрузки (хотя бы один)
 
-1. Разворачиваем minikube на Linux Mint с драйвером docker
-   ![](https://github.com/sonni-a/my-minikube-app/blob/main/img1.png?raw=true)
-2. Создаем docker образ приложения
+
+Запуск:
+`
+minikube start
+`
+Открываем графану:
+`
+kubectl port-forward svc/prometheus-grafana 3000:80
+`
+Затем переходим на localhost:3000 и вводим логин admin и пароль prom-operator.
